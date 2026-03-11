@@ -2,7 +2,6 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import { type App, MarkdownRenderer, Component, Notice, Platform } from "obsidian";
 import { Copy, Check, CheckCircle, XCircle, Download, Eye } from "lucide-react";
 import type { Message, ToolCall } from "src/types";
-import { AVAILABLE_MODELS } from "src/types";
 import { HTMLPreviewModal, extractHtmlFromCodeBlock } from "./HTMLPreviewModal";
 import { McpAppRenderer } from "./McpAppRenderer";
 import { splitAssistantLeadIn, normalizeThinkingSections } from "./messageSegmentation";
@@ -110,9 +109,7 @@ export default function MessageBubble({
   // Get model display name
   const getModelDisplayName = () => {
     if (isUser) return t("message.you");
-    if (!message.model) return t("message.gemini");
-    const modelInfo = AVAILABLE_MODELS.find(m => m.name === message.model);
-    return modelInfo?.displayName || message.model;
+    return "ChatGPT";
   };
 
   // Convert tool call to display info
