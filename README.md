@@ -50,7 +50,7 @@ Then in Obsidian:
 
 ## Status
 
-This pass completes the fork-based reset:
+This `v0.1.0` baseline is the first working basic version:
 
 - imported the `obsidian-gemini-helper` base
 - rebranded the plugin as `vault-codex-assistant`
