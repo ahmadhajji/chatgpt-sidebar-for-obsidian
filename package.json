@@ -1,7 +1,7 @@
 {
   "name": "chatgpt-sidebar-for-obsidian",
   "version": "1.0.1",
-  "description": "ChatGPT-style vault sidebar assistant for Obsidian with AGENTS.md-aware chat.",
+  "description": "ChatGPT-style vault sidebar assistant with AGENTS.md-aware chat.",
   "main": "main.js",
   "scripts": {
     "dev": "node esbuild.config.mjs",

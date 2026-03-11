@@ -1,6 +1,6 @@
-# ChatGPT Sidebar for Obsidian
+# ChatGPT Sidebar
 
-ChatGPT Sidebar for Obsidian is an Obsidian desktop plugin that brings a ChatGPT-style assistant into the vault sidebar. It is local-first, scoped to the currently open vault, and designed around Codex CLI rather than a hosted multi-provider setup.
+ChatGPT Sidebar is an Obsidian desktop plugin that brings a ChatGPT-style assistant into the vault sidebar. It is local-first, scoped to the currently open vault, and designed around Codex CLI rather than a hosted multi-provider setup.
 
 This project is derived from [`takeshy/obsidian-gemini-helper`](https://github.com/takeshy/obsidian-gemini-helper), with the product surface intentionally narrowed and reworked for a Codex-first Obsidian workflow.
 
@@ -36,7 +36,7 @@ This plugin is intentionally desktop-only and local-first. It does not use a loc
 
 3. Copy those release files into that folder.
 4. In Obsidian, open `Settings -> Community plugins`.
-5. Reload plugins and enable `ChatGPT Sidebar for Obsidian`.
+5. Reload plugins and enable `ChatGPT Sidebar`.
 
 ### Local development install
 

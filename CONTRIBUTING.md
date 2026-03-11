@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for contributing to ChatGPT Sidebar for Obsidian.
+Thanks for contributing to ChatGPT Sidebar.
 
 ## Before you start
 

@@ -101,7 +101,7 @@ export class GeminiHelperPlugin extends Plugin {
           this.initializeClients();
         }
       } catch (e) {
-        console.error("ChatGPT Sidebar for Obsidian: Failed to initialize clients:", formatError(e));
+        console.error("ChatGPT Sidebar: Failed to initialize clients:", formatError(e));
       }
       // Emit event to refresh UI after workspace state is loaded
       this.settingsEmitter.emit("workspace-state-loaded", this.workspaceState);
@@ -692,13 +692,13 @@ export class GeminiHelperPlugin extends Plugin {
   ): Promise<null> {
     void ragSettingName;
     void onProgress;
-    new Notice("Semantic search is disabled in ChatGPT Sidebar for Obsidian.");
+    new Notice("Semantic search is disabled in ChatGPT Sidebar.");
     return null;
   }
 
   // Delete RAG store from server
   async deleteRagStore(ragSettingName: string): Promise<void> {
-    throw new Error(`Semantic search is disabled in ChatGPT Sidebar for Obsidian (${ragSettingName})`);
+    throw new Error(`Semantic search is disabled in ChatGPT Sidebar (${ragSettingName})`);
   }
 
   // Legacy compatibility: ragState getter
@@ -788,12 +788,12 @@ export class GeminiHelperPlugin extends Plugin {
 
   private async handleTempUpload(file: TFile): Promise<void> {
     void file;
-    new Notice("Drive Sync is disabled in ChatGPT Sidebar for Obsidian.");
+    new Notice("Drive Sync is disabled in ChatGPT Sidebar.");
   }
 
   private async handleTempDownload(file: TFile): Promise<void> {
     void file;
-    new Notice("Drive Sync is disabled in ChatGPT Sidebar for Obsidian.");
+    new Notice("Drive Sync is disabled in ChatGPT Sidebar.");
   }
 
   // ========================================
