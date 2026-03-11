@@ -1,0 +1,10 @@
+{
+	"id": "vault-codex-assistant",
+	"name": "Vault Codex Assistant",
+	"minAppVersion": "1.10.0",
+	"description": "Vault-scoped Codex assistant for Obsidian with AGENTS.md-aware chat.",
+	"author": "Ahmad Hajji",
+	"authorUrl": "https://github.com/ahmadhajji",
+	"isDesktopOnly": true,
+	"version": "0.2.0"
+}

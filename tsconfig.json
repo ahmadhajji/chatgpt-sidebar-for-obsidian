@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "baseUrl": ".",
+    "inlineSourceMap": true,
+    "inlineSources": true,
+    "module": "ESNext",
+    "target": "ES2020",
+    "allowJs": true,
+    "noImplicitAny": true,
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "isolatedModules": true,
+    "strictNullChecks": true,
+    "lib": ["DOM", "ES2020"],
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["src/**/*"],
+  "exclude": [
+    "src/**/*.test.ts",
+    "src/bridge/**/*",
+    "src/chat/**/*",
+    "src/context/**/*",
+    "src/proposals/**/*",
+    "src/settings/**/*",
+    "src/ui/sidebar-view.ts",
+    "src/ui/components/workflow/WorkflowPanel.tsx",
+    "src/ui/settings/driveSyncSettings.ts",
+    "src/ui/settings/langfuseSettings.ts",
+    "src/ui/settings/mcpServersSettings.ts",
+    "src/ui/settings/ragSettings.ts"
+  ]
+}
