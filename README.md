@@ -1,62 +1,90 @@
 # Vault Codex Assistant
 
-`Vault Codex Assistant` is an Obsidian desktop plugin that forks the working foundation of [`takeshy/obsidian-gemini-helper`](https://github.com/takeshy/obsidian-gemini-helper) and narrows it into a Codex-first, vault-scoped assistant.
+Vault Codex Assistant is an Obsidian desktop plugin that brings a Codex-style assistant into the vault sidebar. It is local-first, scoped to the currently open vault, and designed around Codex CLI rather than a hosted multi-provider setup.
 
-## Current direction
+This project is derived from [`takeshy/obsidian-gemini-helper`](https://github.com/takeshy/obsidian-gemini-helper), with the product surface intentionally narrowed and reworked for a Codex-first Obsidian workflow.
 
-- Codex CLI is the only active backend.
-- The current vault is the only workspace boundary.
-- `AGENTS.md` in the vault root is injected into Codex chat context by default.
-- The plugin keeps the reference project’s stronger parts: sidebar chat UX, vault-aware context plumbing, note tools, edit history, and CLI session handling.
-- Gemini API, Claude CLI, RAG, Drive Sync, MCP settings, and workflow-first UI are hidden or disabled until they have a Codex-native path.
+## Features
 
-## Why this fork differs from the reference
+- Vault-scoped chat in an Obsidian sidebar
+- Codex CLI as the only supported backend
+- Automatic vault-root `AGENTS.md` loading by default
+- Active-note and vault-file context integration
+- `@file.md` references for vault files
+- `/model`, `/fast`, and `/status` chat commands
+- Structured thinking/progress display with a clearly separated final answer
+- Desktop-only runtime with local CLI execution
 
-Inspired by `obsidian-gemini-helper`:
-- desktop-friendly Obsidian plugin structure
-- chat sidebar architecture
-- CLI provider/session handling
-- note edit confirmation and diff tooling
+## Scope and Requirements
 
-Intentional differences for this project:
-- no bridge or localhost companion process in the active runtime path
-- no multi-provider UX
-- no public-facing Gemini feature surface
-- vault-local `AGENTS.md` as durable instruction context
-- Codex-only setup and branding
+- Obsidian desktop `1.10.0` or newer
+- A working local [`codex`](https://github.com/openai/codex) installation
+- A vault where you want the assistant confined to the current workspace
 
-Those differences are deliberate because this plugin is meant to behave like a Codex workspace assistant inside a single vault, not a general AI toolbox.
+This plugin is intentionally desktop-only and local-first. It does not use a localhost bridge in the active runtime path, and it does not expose the broader Gemini Helper feature surface such as Gemini API, Claude CLI, Drive Sync, RAG, or workflow-first UI.
 
-## Install for local testing
+## Install
+
+### Manual install from GitHub releases
+
+1. Download `main.js`, `manifest.json`, and `styles.css` from the latest GitHub release.
+2. Create this folder in your vault:
+
+```text
+.obsidian/plugins/vault-codex-assistant/
+```
+
+3. Copy those release files into that folder.
+4. In Obsidian, open `Settings -> Community plugins`.
+5. Reload plugins and enable `Vault Codex Assistant`.
+
+### Local development install
 
 ```bash
 npm install
 npm run build
 ```
 
-Copy these files into your vault at `.obsidian/plugins/vault-codex-assistant/`:
+Then copy:
 
 - `main.js`
 - `manifest.json`
 - `styles.css`
 
-Then in Obsidian:
+into `.obsidian/plugins/vault-codex-assistant/` in a test vault.
 
-1. Open `Settings -> Community plugins`
-2. Reload plugins
-3. Enable `Vault Codex Assistant`
-4. Open the `Vault Codex` sidebar
-5. In plugin settings, verify the `codex` executable path
+## Usage
 
-## Status
+1. Open the Vault Codex sidebar from the command palette or ribbon.
+2. Confirm the plugin can find your `codex` executable in settings.
+3. Optionally add an `AGENTS.md` file to the vault root for durable vault instructions.
+4. Start chatting about the current vault.
 
-This `v0.1.0` baseline is the first working basic version:
+Useful chat affordances:
 
-- imported the `obsidian-gemini-helper` base
-- rebranded the plugin as `vault-codex-assistant`
-- removed the old bridge-based runtime path
-- constrained runtime setup to Codex CLI
-- injected `AGENTS.md` into chat prompts
-- hid incompatible settings and UI surfaces
+- `@some-note.md` to reference a vault file
+- `/model <name>` to set the current runtime model
+- `/fast` to toggle the fast-mode shortcut
+- `/status` to show the current Codex runtime state
 
-Remaining work is product hardening on top of this base: stronger Codex-native structured proposal flows, tighter per-vault session semantics, and cleanup of remaining dormant Gemini-era modules.
+## Attribution
+
+This repository builds on the upstream architecture and earlier work in [`takeshy/obsidian-gemini-helper`](https://github.com/takeshy/obsidian-gemini-helper). The fork keeps that project’s useful Obsidian plugin foundation while changing the runtime model, branding, and product direction for a vault-scoped Codex assistant.
+
+This project is not affiliated with Obsidian, OpenAI, or the upstream project maintainer.
+
+## Development
+
+```bash
+npm install
+npm run build
+npm test
+```
+
+## Contributing
+
+See [CONTRIBUTING.md](./CONTRIBUTING.md).
+
+## License
+
+MIT. See [LICENSE](./LICENSE).

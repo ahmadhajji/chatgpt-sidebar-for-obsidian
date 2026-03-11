@@ -46,4 +46,4 @@ We intentionally changed:
 ## Current constraints
 
 - Some Gemini-era modules still exist in the tree but are hidden or excluded from the active build surface.
-- The plugin is now stable enough to load and build as a Codex-first fork, but it is not yet a final polished public release.
+- Some inherited legacy docs from the upstream base still exist in this repository and should not be treated as authoritative for the current plugin surface.

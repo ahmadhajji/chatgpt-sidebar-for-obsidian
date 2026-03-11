@@ -1,7 +1,7 @@
 {
   "name": "vault-codex-assistant",
   "version": "1.0.0",
-  "description": "Vault-scoped Codex assistant for Obsidian",
+  "description": "Vault-scoped Codex assistant for Obsidian with AGENTS.md-aware chat.",
   "main": "main.js",
   "scripts": {
     "dev": "node esbuild.config.mjs",
@@ -28,6 +28,7 @@
   "bugs": {
     "url": "https://github.com/ahmadhajji/vault-codex-assistant/issues"
   },
+  "homepage": "https://github.com/ahmadhajji/vault-codex-assistant#readme",
   "devDependencies": {
     "@codemirror/state": "6.5.0",
     "@codemirror/view": "6.38.6",
