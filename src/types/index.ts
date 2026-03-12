@@ -428,20 +428,6 @@ export const FREE_MODELS: ModelInfo[] = [
   },
 ];
 
-function mergeModelLists(lists: ModelInfo[][]): ModelInfo[] {
-  const merged: ModelInfo[] = [];
-  const seen = new Set<string>();
-  for (const list of lists) {
-    for (const model of list) {
-      if (!seen.has(model.name)) {
-        seen.add(model.name);
-        merged.push(model);
-      }
-    }
-  }
-  return merged;
-}
-
 export const AVAILABLE_MODELS: ModelInfo[] = [CODEX_CLI_MODEL];
 
 export function getAvailableModels(plan: ApiPlan): ModelInfo[] {

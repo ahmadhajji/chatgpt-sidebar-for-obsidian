@@ -11,7 +11,6 @@ import { Plus, History, ChevronDown, Lock, FileText, Loader2, Check } from "luci
 import type { GeminiHelperPlugin } from "src/plugin";
 import {
 	DEFAULT_CLI_CONFIG,
-	getAvailableModels,
 	isModelAllowedForPlan,
 	getDefaultModelForPlan,
 	CODEX_CLI_MODEL,

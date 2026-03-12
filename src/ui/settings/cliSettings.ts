@@ -14,7 +14,7 @@ export function displayCliSettings(containerEl: HTMLElement, ctx: SettingsContex
   new Setting(containerEl).setName("Codex CLI").setHeading();
 
   const introEl = containerEl.createDiv({ cls: "setting-item-description gemini-helper-cli-intro" });
-  introEl.textContent = "ChatGPT Sidebar runs on Codex CLI only. Verify the CLI here and set an explicit path if Obsidian cannot locate it.";
+  introEl.textContent = "This sidebar runs on the local codex CLI only. Verify the CLI here and set an explicit path if Obsidian cannot locate it.";
 
   createCliVerifyRow(containerEl, {
     name: "Codex CLI",
@@ -35,8 +35,8 @@ export function displayCliSettings(containerEl: HTMLElement, ctx: SettingsContex
   note.createEl("strong", { text: "Boundaries:" });
   const list = note.createEl("ul");
   list.createEl("li").textContent = "Codex CLI is the only active backend in this fork.";
-  list.createEl("li").textContent = "Gemini API, Claude, RAG, Drive Sync, MCP, and workflow settings are hidden until they have a Codex-native path.";
-  list.createEl("li").textContent = "AGENTS.md in the vault root is injected into Codex prompts automatically when present.";
+  list.createEl("li").textContent = "Unavailable upstream features stay hidden until they have a codex-native path.";
+  list.createEl("li").textContent = "AGENTS.md in the vault root is injected into codex prompts automatically when present.";
 }
 
 function createCliVerifyRow(
@@ -77,7 +77,7 @@ function createCliVerifyRow(
   setting.addExtraButton((button) =>
     button
       .setIcon("settings")
-      .setTooltip("Set Codex CLI path")
+      .setTooltip("Set codex CLI path")
       .onClick(() => options.onSettings(options.customPath))
   );
 }
@@ -117,7 +117,7 @@ async function handleVerifyCodex(
 ): Promise<void> {
   statusEl.empty();
   statusEl.removeClass("gemini-helper-cli-status--success", "gemini-helper-cli-status--error");
-  statusEl.setText("Verifying Codex CLI...");
+  statusEl.setText("Verifying codex CLI...");
 
   try {
     const result = await verifyCodexCli(plugin.settings.cliConfig.codexCliPath);
