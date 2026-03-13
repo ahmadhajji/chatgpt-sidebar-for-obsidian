@@ -692,13 +692,13 @@ export class GeminiHelperPlugin extends Plugin {
   ): Promise<null> {
     void ragSettingName;
     void onProgress;
-    new Notice("Semantic search is disabled in ChatGPT sidebar.");
+    new Notice("Semantic search is disabled in this sidebar.");
     return Promise.resolve(null);
   }
 
   // Delete RAG store from server
   deleteRagStore(ragSettingName: string): Promise<void> {
-    return Promise.reject(new Error(`Semantic search is disabled in ChatGPT sidebar (${ragSettingName})`));
+    return Promise.reject(new Error(`Semantic search is disabled in this sidebar (${ragSettingName})`));
   }
 
   // Legacy compatibility: ragState getter
@@ -788,13 +788,13 @@ export class GeminiHelperPlugin extends Plugin {
 
   private handleTempUpload(file: TFile): Promise<void> {
     void file;
-    new Notice("Drive sync is disabled in ChatGPT sidebar.");
+    new Notice("Drive sync is disabled in this sidebar.");
     return Promise.resolve();
   }
 
   private handleTempDownload(file: TFile): Promise<void> {
     void file;
-    new Notice("Drive sync is disabled in ChatGPT sidebar.");
+    new Notice("Drive sync is disabled in this sidebar.");
     return Promise.resolve();
   }
 

@@ -36,7 +36,7 @@ export function displayCliSettings(containerEl: HTMLElement, ctx: SettingsContex
   const list = note.createEl("ul");
   list.createEl("li").textContent = "Codex CLI is the only active backend in this fork.";
   list.createEl("li").textContent = "Unavailable upstream features stay hidden until they have a codex-native path.";
-  list.createEl("li").textContent = "AGENTS.md in the vault root is injected into codex prompts automatically when present.";
+  list.createEl("li").textContent = "The vault-root instructions file is injected into codex prompts automatically when present.";
 }
 
 function createCliVerifyRow(

@@ -20,7 +20,7 @@ export class ChatView extends ItemView {
   }
 
   getDisplayText(): string {
-    return "ChatGPT sidebar";
+    return "Chat sidebar";
   }
 
   getIcon(): IconName {
